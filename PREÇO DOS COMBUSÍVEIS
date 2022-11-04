@@ -1,0 +1,17 @@
+litros = float(input("Quantos litros vc quer abastecer: "))
+combustível = input("Digite E para etanol ou G para gasolina: ")
+preco = 0
+if combustível  == "E" or combustível == "e":
+ preco = litros * 4.1
+ if litros <= 20:
+        preco -= 4.1 * litros * 3 / 100
+ else:
+        preco -= 4.1 * litros * 5 / 100
+elif combustível == "G" or combustível == "g":
+    preco = litros * 4.5
+    if litros <= 20:
+        preco -= 4.5 * litros * 4 / 100
+    else:
+        preco -= 4.5 * litros * 6 / 100
+print(f"O preço a pagar é R${preco}")
+    
